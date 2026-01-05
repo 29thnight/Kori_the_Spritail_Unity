@@ -60,13 +60,7 @@
 ---
 
 ## Controls
-
-- **Player 1 / Player 2**
-  - Left Stick: Move
-  - Action Button: Attack / Interaction
-  - Support Button: Kori Ability / Assist Action
-
-(최종 버튼 매핑은 플랫폼별로 조정될 수 있습니다.)
+(추후 작성)
 
 ---
 불필요한 Editor 전용 패키지 제거
