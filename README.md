@@ -69,20 +69,6 @@
 (최종 버튼 매핑은 플랫폼별로 조정될 수 있습니다.)
 
 ---
-
-## Project Structure
-
-```text
-Assets/
- ├─ Scripts/          # Gameplay / System Scripts
- ├─ Scenes/           # Game Scenes
- ├─ Prefabs/          # Characters / Enemies / Objects
- ├─ UI/               # HUD / In-Game UI
- ├─ Art/              # Models / Textures / Effects
- └─ Settings/         # Platform / Input / Build Settings
-Notes for Switch Porting
-퍼포먼스 안정화를 위해 프레임 드롭 방지를 우선 고려
-
 불필요한 Editor 전용 패키지 제거
 
 메모리 사용량 및 로딩 타이밍 주의
