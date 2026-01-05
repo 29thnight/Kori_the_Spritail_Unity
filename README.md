@@ -40,8 +40,8 @@
 
 - **Unity Version**: 2022 LTS (Switch 지원 버전)
 - **Target Platform**: Nintendo Switch
-- **OS**: Windows 10 / 11
-- **Version Control**: Git
+- **OS**: Windows 11
+- **Version Control**: Github(스크립트 및 Shaderlab) & SVN (기타 텍스쳐 및 3D모델 에셋)
 
 ---
 
