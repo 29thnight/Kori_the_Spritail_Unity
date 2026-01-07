@@ -1,4 +1,4 @@
-/*using UnityEditor;
+using UnityEditor;
 using UnityEngine;
 
 public class PNGBatchResizer : EditorWindow
@@ -41,4 +41,3 @@ public class PNGBatchResizer : EditorWindow
         Debug.Log($"PNG resize ¿Ï·á: Max {size}px");
     }
 }
-*/
