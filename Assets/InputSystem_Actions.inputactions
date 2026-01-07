@@ -991,34 +991,6 @@
                     "isPartOfComposite": false
                 }
             ]
-        },
-        {
-            "name": "Debug",
-            "id": "07bd738a-4b55-4b1b-973f-8733512e9127",
-            "actions": [
-                {
-                    "name": "DebugAction",
-                    "type": "Button",
-                    "id": "2d93650e-862b-4ec9-a4d1-43b6a693ee3c",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "5a21fbcf-6cb9-4a4e-87b7-38875070f193",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "DebugAction",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
         }
     ],
     "controlSchemes": [
