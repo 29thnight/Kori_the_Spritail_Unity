@@ -506,7 +506,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream:Assets/Scenes/BootstrapScene.unity
 --- !u!1 &1681206038
+=======
+--- !u!1 &231965552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 231965553}
+  - component: {fileID: 231965554}
+  m_Layer: 0
+  m_Name: Sceee
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &231965553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231965552}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 101.46098, y: -19.084509, z: 90.72979}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &231965554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231965552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c477f2f79c0973e4e9c141352b3a6e54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  init: {fileID: 11400000, guid: 0295e1064a30acf489c042097c3ba525, type: 2}
+--- !u!1 &464670553
+>>>>>>> Stashed changes:Assets/Scenes/MainScene.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -615,8 +664,13 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
+<<<<<<< Updated upstream:Assets/Scenes/BootstrapScene.unity
   m_EditorClassIdentifier: 
   m_Version: 3
+=======
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_Version: 4
+>>>>>>> Stashed changes:Assets/Scenes/MainScene.unity
   m_UsePipelineSettings: 1
   m_AdditionalLightsShadowResolutionTier: 2
   m_LightLayerMask: 1
@@ -627,6 +681,7 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+<<<<<<< Updated upstream:Assets/Scenes/BootstrapScene.unity
 --- !u!1 &1716124571
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,6 +833,9 @@ CanvasRenderer:
   m_GameObject: {fileID: 1796165058}
   m_CullTransparentMesh: 1
 --- !u!1 &2122739849
+=======
+--- !u!1 &1263557802
+>>>>>>> Stashed changes:Assets/Scenes/MainScene.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -870,6 +928,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream:Assets/Scenes/BootstrapScene.unity
 --- !u!114 &2122739853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -989,12 +1048,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138850049}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Stashed changes:Assets/Scenes/MainScene.unity
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+<<<<<<< Updated upstream:Assets/Scenes/BootstrapScene.unity
   - {fileID: 2122739852}
   - {fileID: 1681206040}
   - {fileID: 628184683}
   - {fileID: 1580622169}
   - {fileID: 482940047}
+=======
+  - {fileID: 1263557805}
+  - {fileID: 464670555}
+  - {fileID: 50490191}
+  - {fileID: 231965553}
+>>>>>>> Stashed changes:Assets/Scenes/MainScene.unity

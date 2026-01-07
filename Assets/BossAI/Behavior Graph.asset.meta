@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: fa4e1cac32aeeeb47a131c4804e61601
+<<<<<<<< Updated upstream:Assets/BossAI/Behavior Graph.asset.meta
+guid: bda9224a393625348835517051732e6f
+========
+guid: 0295e1064a30acf489c042097c3ba525
+>>>>>>>> Stashed changes:Assets/Ignore/Init/Nintendo.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
