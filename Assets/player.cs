@@ -35,23 +35,15 @@ public class player : MonoBehaviour
     public float comboDuration = 0.5f;
     public float comboElasepdTime = 0f;
     public bool isAttacking = false;
-    //float rapidfireTime = 0.5f;
-    //float rapidfireElapsedTime = 0f;
-    //bool canRapidfire = false;
     public float rangedAutoAimRange = 10.0f;
 	float rangeAngle = 150.0f;
     public bool canMeleeCancel = false;
-    //float chargingTime = 0.0f;
     bool isCharging = false;
-    bool isChargeAttack = false;
 
     float nearDistance = float.MaxValue;
 
     int countRangeAttack = 0;
     public int countSpecialBullet = 5;
-    //public float MaxThrowDistance = 2.5f;
-   // public float bombMoveSpeed = 0.05f;
-
     public GameObject basicWeaponPrefab;
     public GameObject meleeWeaponPrefab;
     public GameObject rangeWeaponPrefab;
@@ -62,6 +54,11 @@ public class player : MonoBehaviour
     List<weapon> weaponInven = new List<weapon>();
     public weapon curWeapon;
     public bool sucessAttack = false;
+
+    public float HitGracePeriodTime = 2.0f;
+    public float curGracePeriodTime = 0.0f;
+    public  bool OnInvincibility = false;
+
     void Start()
     {
         cc = GetComponent<CharacterController>();
@@ -102,6 +99,16 @@ public class player : MonoBehaviour
             sucessAttack = false;
         }
 
+
+        if(OnInvincibility)
+        {
+            curGracePeriodTime -= Time.deltaTime;
+            if(curGracePeriodTime <= 0.0f)
+            {
+                curGracePeriodTime = 0.0f;
+                OnInvincibility = false;
+            }
+        }
         if (isDashing)
         {
             DashMove();
@@ -112,8 +119,16 @@ public class player : MonoBehaviour
 
     public void sendDamage(int _damage)
     {
+        if (OnInvincibility) return;
+        anim.SetTrigger("OnHit");
+
+        Damage(_damage);
+    }
+
+    void Damage(int _damage)
+    {
         curHP -= _damage;
-        if(curHP <= 0)
+        if (curHP <= 0)
         {
             curHP = 0;
         }
@@ -266,7 +281,7 @@ public class player : MonoBehaviour
         state = 0;
         state |= StateFlag.CanAttack;
     }
-
+    
     public void SetBitStun()
     {
         state = 0;
