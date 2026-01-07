@@ -25,6 +25,7 @@ public sealed class WeaponIconSet : ScriptableObject
     [Header("UI Overlays")]
     [SerializeField] private Sprite gaugeSprite;  // 예: 2_MeleeWeaponGage.png (Image Filled에 사용)
     [SerializeField] private Sprite textBgSprite; // 예: 2_MeleeWeaponTextBg.png (슬롯 번호 배경)
+    [SerializeField] private Sprite selectedOutlineSprite; // ★ 추가: 선택 외곽선
 
     [Header("Empty Slot")]
     [SerializeField] private Sprite emptySlotIcon; // 빈 슬롯 아이콘 (공통이어도 OK)
@@ -40,6 +41,7 @@ public sealed class WeaponIconSet : ScriptableObject
 
     public Sprite GaugeSprite => gaugeSprite;
     public Sprite TextBgSprite => textBgSprite;
+    public Sprite SelectedOutlineSprite => selectedOutlineSprite;
 
     public Sprite EmptySlotIcon => emptySlotIcon;
 
@@ -57,6 +59,7 @@ public sealed class WeaponIconSet : ScriptableObject
             if (gaugeSprite == null) { reason = "GaugeSprite가 비어 있습니다."; return false; }
             if (textBgSprite == null) { reason = "TextBgSprite가 비어 있습니다."; return false; }
             if (emptySlotIcon == null) { reason = "EmptySlotIcon이 비어 있습니다."; return false; }
+            if (selectedOutlineSprite == null) { reason = "SelectedOutlineSprite가 비어 있습니다."; return false; }
         }
 
         reason = null;

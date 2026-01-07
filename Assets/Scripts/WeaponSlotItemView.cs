@@ -24,7 +24,7 @@ public sealed class WeaponSlotItemView : MonoBehaviour
 
     [Header("Optional Visuals")]
     [SerializeField] private GameObject selectedFx; // optional highlight/glow
-
+    [SerializeField] private Image selectedOutline;
     // State
     private WeaponIconSet iconSet;
     private int slotIndex = -1;
@@ -135,6 +135,9 @@ public sealed class WeaponSlotItemView : MonoBehaviour
     {
         if (iconSet == null) return;
 
+        if (selectedOutline != null && iconSet.SelectedOutlineSprite != null)
+            selectedOutline.sprite = iconSet.SelectedOutlineSprite;
+
         if (durability != null && iconSet.GaugeSprite != null)
             durability.sprite = iconSet.GaugeSprite;
 
@@ -163,8 +166,16 @@ public sealed class WeaponSlotItemView : MonoBehaviour
         if (iconActive != null)
             iconActive.gameObject.SetActive(!isEmpty && isSelected);
 
+
+
         if (selectedFx != null)
             selectedFx.SetActive(!isEmpty && isSelected);
+
+        if (textBg != null)
+            textBg.gameObject.SetActive(!isEmpty);
+
+        if (slotIndexText != null)
+            slotIndexText.gameObject.SetActive(!isEmpty);
 
         // 아이콘 스프라이트 적용
         if (!isEmpty && iconSet != null)
