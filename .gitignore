@@ -84,6 +84,3 @@ crashlytics-build.properties
 Assets/NintendoSDKPlugin/NintendoSDKPlugin.dll
 *.nmeta
 Assets/NintendoSDKPlugin.meta
-Packages/packages-lock.json
-Packages/packages-lock.json
-Packages/manifest.json
