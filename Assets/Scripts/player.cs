@@ -59,6 +59,9 @@ public class player : MonoBehaviour
     public float curGracePeriodTime = 0.0f;
     public  bool OnInvincibility = false;
 
+    public List<weapon> Weapons => weaponInven;
+    public int SelectedWeaponIndex => weaponIndex;
+
     void Start()
     {
         cc = GetComponent<CharacterController>();
