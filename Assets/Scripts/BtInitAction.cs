@@ -13,8 +13,8 @@ public partial class BtInitAction : Action
     [SerializeReference] public BlackboardVariable<GameObject> Pool;
     protected override Status OnStart()
     {
-        GameObject player1 = GameObject.Find("1P");
-        GameObject player2 = GameObject.Find("2P");
+        GameObject player1 = GameObject.Find("PlayerBoy");
+        GameObject player2 = GameObject.Find("PlayerGirl");
         GameObject pool = GameObject.Find("ProjectilePooler");
         Player1.Value = player1;
         Player2.Value = player2;
