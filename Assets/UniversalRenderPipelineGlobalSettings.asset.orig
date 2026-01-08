@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
-  m_ObjectHideFlags: 64
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ec995e51a6e251468d2a3fd8a686257, type: 3}
-  m_Name: 
+  m_Name: UniversalRenderPipelineGlobalSettings
   m_EditorClassIdentifier: 
   m_ShaderStrippingSetting:
     m_Version: 0
@@ -60,17 +60,7 @@ MonoBehaviour:
       - rid: 6548910217488236636
       - rid: 6548910217488236637
     m_RuntimeSettings:
-      m_List:
-      - rid: 6548910217488236612
-      - rid: 6548910217488236614
-      - rid: 6548910217488236622
-      - rid: 6548910217488236623
-      - rid: 6548910217488236625
-      - rid: 6548910217488236626
-      - rid: 6548910217488236627
-      - rid: 6548910217488236629
-      - rid: 6548910217488236630
-      - rid: 6548910217488236637
+      m_List: []
   m_AssetVersion: 8
   m_ObsoleteDefaultVolumeProfile: {fileID: 0}
   m_RenderingLayerNames:

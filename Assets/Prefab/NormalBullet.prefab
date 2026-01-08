@@ -29215,7 +29215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   lifeTime: 5
-  moveSpeed: 1
+  moveSpeed: 10
 --- !u!135 &4888620369189824419
 SphereCollider:
   m_ObjectHideFlags: 0

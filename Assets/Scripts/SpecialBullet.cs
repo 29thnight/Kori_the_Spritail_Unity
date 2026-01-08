@@ -25,13 +25,15 @@ public class SpecialBullet : Bullet
         {
             if (hit.CompareTag("Boss"))
             {
-                //other.GetComponent<Boss>().TakeDamage(damage);
+               
                 //보스 데미지주기
                 //폭발이펙트 재생
             }
         }
-       
-       
+
+
+        Boss boss = other.GetComponent<Boss>();
+        boss.Damege(7);
         Destroy(gameObject);
     }
 }

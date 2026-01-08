@@ -22,12 +22,12 @@ public class Boss : MonoBehaviour
 
         bool check = graphAgent.GetVariable<int>("curHP", out curHP);
 
-        if (!check) {
+        /*if (!check) {
             Debug.LogError("Failed to get curHP variable from blackboard.");
         }
         else {
             Debug.Log("Successfully got curHP variable from blackboard." + curHP.Value);
-        }
+        }*/
         
     }
 

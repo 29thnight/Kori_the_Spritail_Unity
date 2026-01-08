@@ -916,70 +916,6 @@ MonoBehaviour:
     m_ActionId: 6c2ab1b8-8984-453a-af3d-a3c78ae1679a
     m_ActionName: 'Player/Attack[/Keyboard/j]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4035048083850110691}
-        m_TargetAssemblyTypeName: player, Assembly-CSharp
-        m_MethodName: OnDash
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: ae96c488-f8b3-4af5-a533-601f2bd6643b
-    m_ActionName: Player/Dash
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4035048083850110691}
-        m_TargetAssemblyTypeName: player, Assembly-CSharp
-        m_MethodName: OnCatchAndThrow
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 2331d3ce-56e1-42ea-b40e-a4f80786f6c9
-    m_ActionName: Player/Catch/Throw
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4035048083850110691}
-        m_TargetAssemblyTypeName: player, Assembly-CSharp
-        m_MethodName: SwapWeaponLeft
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: a1919b36-6db4-4bb9-a8e8-d7ab980a0412
-    m_ActionName: 'Player/SwapweaponLeft[/Keyboard/z]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4035048083850110691}
-        m_TargetAssemblyTypeName: player, Assembly-CSharp
-        m_MethodName: SwapWeaponRight
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: aeafd327-aa88-438e-a4be-06f64d289e13
-    m_ActionName: 'Player/SwapweaponRight[/Keyboard/x]'
-  - m_PersistentCalls:
       m_Calls: []
     m_ActionId: c95b2375-e6d9-4b88-9c4c-c5e76515df4b
     m_ActionName: 'UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
@@ -1019,6 +955,58 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4035048083850110691}
+        m_TargetAssemblyTypeName: player, Assembly-CSharp
+        m_MethodName: OnDash
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ae96c488-f8b3-4af5-a533-601f2bd6643b
+    m_ActionName: 'Player/Dash[/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2331d3ce-56e1-42ea-b40e-a4f80786f6c9
+    m_ActionName: Player/Catch/Throw
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4035048083850110691}
+        m_TargetAssemblyTypeName: player, Assembly-CSharp
+        m_MethodName: SwapWeaponLeft
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a1919b36-6db4-4bb9-a8e8-d7ab980a0412
+    m_ActionName: 'Player/SwapweaponLeft[/Keyboard/z]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4035048083850110691}
+        m_TargetAssemblyTypeName: player, Assembly-CSharp
+        m_MethodName: SwapWeaponRight
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: aeafd327-aa88-438e-a4be-06f64d289e13
+    m_ActionName: 'Player/SwapweaponRight[/Keyboard/x]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -1033,26 +1021,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 2846534100457462445}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e3b3a0161394c142b5695dbaad4b79a, type: 3}
+  m_Script: {fileID: 11500000, guid: 75e6c1627f2341745baff48525b4b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::player
   state: 0
   handsocket: {fileID: 6620375688960011453}
   ShootPos: {fileID: 876438321060137195}
   MaxHP: 100
-  playerIndex: 1
-  moveSpeed: 5
+  playerIndex: 0
+  moveSpeed: 1
   Atk: 1
-  comboDuration: 1.5
+  comboDuration: 0.5
   comboElasepdTime: 0
   isAttacking: 0
   rangedAutoAimRange: 10
   canMeleeCancel: 0
   countSpecialBullet: 5
-  basicWeaponPrefab: {fileID: 6621861122309375120, guid: d7f49dcbdbca79b40bbfd227c7b03d34, type: 3}
-  meleeWeaponPrefab: {fileID: 3472002478178938623, guid: 0225fdc70e446734d80784613664cbd6, type: 3}
-  rangeWeaponPrefab: {fileID: 7193258052645782673, guid: 39db3419f6183184095896f9c108aaab, type: 3}
-  bombWeaponPrefab: {fileID: 2925650897855217222, guid: 3c9e4aa1a7aff6d4987fbd0328f24ed0, type: 3}
+  basicWeaponPrefab: {fileID: 6621861122309375120, guid: 5d53528f3513402499d80ba10fc36378, type: 3}
+  meleeWeaponPrefab: {fileID: 3472002478178938623, guid: 0d45e9bfc001a114aa000d272959e88d, type: 3}
+  rangeWeaponPrefab: {fileID: 7193258052645782673, guid: a0dbe35e64b250f43956dc50b3adf5ee, type: 3}
+  bombWeaponPrefab: {fileID: 2925650897855217222, guid: 8618d3bcf24d8a34b91c3b1c41f19b06, type: 3}
   normalBullet: {fileID: 6733132649248189488, guid: cc13834340c98c94f8dd834680ed18b2, type: 3}
   specialBullet: {fileID: 3449920688154901902, guid: b67d6aaaf62370b4eb9c64c07d10c436, type: 3}
   curWeapon: {fileID: 0}

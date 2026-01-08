@@ -76,10 +76,8 @@ public class ObjectPooler : MonoBehaviour
             objectToSpawn = poolDictionary[tag].Dequeue();
         }
 
-       
+        objectToSpawn.transform.SetPositionAndRotation(position, rotation);
         objectToSpawn.SetActive(true);
-        objectToSpawn.transform.position = position;
-        objectToSpawn.transform.rotation = rotation;
         
 
         return objectToSpawn;

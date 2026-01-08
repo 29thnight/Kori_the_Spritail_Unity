@@ -88,7 +88,7 @@ public partial class RagedAttackAction : Action
                 // Spawn projectile from pool
                 UnityEngine.Vector3 direction = (Self.Value.transform.forward).normalized;
                 UnityEngine.Quaternion lookRotation = UnityEngine.Quaternion.LookRotation(direction);
-                GameObject projectile = pooler.SpawnFromPool("fire", Self.Value.transform.position + Self.Value.transform.forward * 1.5f, lookRotation);
+                GameObject projectile = pooler.SpawnFromPool("fire", Self.Value.transform.position + Self.Value.transform.forward * 1.5f + UnityEngine.Vector3.up, lookRotation);
                 //GameObject projectile = pooler.SpawnFromPool("fire", Self.Value.transform.position + Self.Value.transform.forward * 1.5f, Quaternion.identity);
                 if (projectile != null) {
                     // Initialize projectile if needed

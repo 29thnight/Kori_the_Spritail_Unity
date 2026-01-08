@@ -18,6 +18,8 @@ public class NormalBullet : Bullet
     {
         if (!other.CompareTag("Boss")) return;
         //other.GetComponent<Boss>().TakeDamage(damage);
+        Boss boss = other.GetComponent<Boss>();
+        boss.Damege(3);
         //보스 데미지주기
         Destroy(gameObject);
     }

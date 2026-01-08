@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b27bb6d9a2c8d540a10dff10acc543e, type: 3}
-  m_Name: Behavior Graph Debug Info
+  m_Name: Behavior Graph_REMOTE_689 Debug Info
   m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphDebugInfo
   m_CodeBreakPointsList: []
 --- !u!114 &11400000
@@ -23,7 +23,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bad8f2220607dac4db5082ff333fafb8, type: 3}
-  m_Name: Behavior Graph
+  m_Name: Behavior Graph_REMOTE_689
   m_EditorClassIdentifier: Unity.Behavior.Authoring::Unity.Behavior.BehaviorAuthoringGraph
   Blackboard: {fileID: 1991381234064068483}
   m_Description: 
@@ -54,13 +54,14 @@ MonoBehaviour:
   - rid: 2865000890179781014
   - rid: 2865000890179781015
   - rid: 2865000908137955385
-  m_VersionTimestamp: 639034674554918609
+  - rid: 2865000908137955904
+  m_VersionTimestamp: 639034674555627819
   m_SerializedVersion: 1
   m_DebugInfo: {fileID: -4746637587632059183}
   m_RuntimeGraph: {fileID: 4283161560956802589}
   AssetID:
-    m_Value0: 3757469083795368381
-    m_Value1: 8011467580752606600
+    m_Value0: 8392073724171082837
+    m_Value1: 8813388923895240426
   Story:
     Story: 
     StoryVariableNames: []
@@ -1009,6 +1010,16 @@ MonoBehaviour:
         IsExposed: 1
         m_IsShared: 0
         m_Value: {fileID: 0}
+    - rid: 2865000908137955904
+      type: {class: StickyNoteModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        Position: {x: -32.06075, y: 325.08804}
+        ID:
+          m_Value0: 6308008980558202275
+          m_Value1: 3971565046436140667
+        Parents: []
+        PortModels: []
+        Text: todo dead action and game clear
     - rid: 4447001825497317376
       type: {class: StartNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
@@ -2283,11 +2294,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2dd922ae02c94c87a66e46a10a7319b9, type: 3}
-  m_Name: Behavior Graph Blackboard
+  m_Name: Behavior Graph_REMOTE_689 Blackboard
   m_EditorClassIdentifier: Unity.Behavior.Authoring::Unity.Behavior.BehaviorBlackboardAuthoringAsset
   AssetID:
-    m_Value0: 3757469083795368381
-    m_Value1: 8011467580752606600
+    m_Value0: 8392073724171082837
+    m_Value1: 8813388923895240426
   m_Variables:
   - rid: 4447001825497317378
   - rid: 4447001825497317663
@@ -2443,7 +2454,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c02bb70996b49eba31d0c206e28da24, type: 3}
-  m_Name: Behavior Graph Blackboard
+  m_Name: Behavior Graph_REMOTE_689 Blackboard
   m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.RuntimeBlackboardAsset
   VersionTimestamp: 639033932778290860
   AssetID:
@@ -2580,7 +2591,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db920e62f70f420bb33c771449926fa4, type: 3}
-  m_Name: Behavior Graph
+  m_Name: Behavior Graph_REMOTE_689
   m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraph
   Graphs:
   - rid: 4447001825497317380
@@ -3129,8 +3140,8 @@ MonoBehaviour:
       type: {class: BehaviorGraphModule, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         AuthoringAssetID:
-          m_Value0: 3757469083795368381
-          m_Value1: 8011467580752606600
+          m_Value0: 8392073724171082837
+          m_Value1: 8813388923895240426
         m_DebugInfo: {fileID: 0}
         BlackboardReference:
           rid: 4447001825497317381
@@ -3143,7 +3154,7 @@ MonoBehaviour:
           rid: 4447001825497317383
         m_EndedNodes:
           rid: 4447001825497317384
-        m_VersionTimestamp: 639034674554918609
+        m_VersionTimestamp: 639034674555627819
     - rid: 4447001825497317381
       type: {class: BlackboardReference, ns: Unity.Behavior, asm: Unity.Behavior}
       data:

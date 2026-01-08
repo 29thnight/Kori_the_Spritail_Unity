@@ -58,7 +58,6 @@ public class player : MonoBehaviour
     public float HitGracePeriodTime = 2.0f;
     public float curGracePeriodTime = 0.0f;
     public  bool OnInvincibility = false;
-
     void Start()
     {
         cc = GetComponent<CharacterController>();
@@ -76,13 +75,15 @@ public class player : MonoBehaviour
         AddWeapon(rangeweapon.GetComponent<weapon>());
 
 
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         CheckComboTime();
-        if(curWeapon.isBreak ==true && sucessAttack == true)
+
+        if(!curWeapon  && curWeapon.isBreak ==true && sucessAttack == true)
         {
             DeleteCurWeapon();
         }
@@ -128,6 +129,7 @@ public class player : MonoBehaviour
     }
     private void CharMove()
     {
+
         if ((state & StateFlag.CanMove) == 0) return;
         Vector2 raw = moveInput;
 
@@ -391,6 +393,10 @@ public class player : MonoBehaviour
                 if (!AttackEnd)
                 {
                     //보스때리기 
+                    Debug.LogError("Boss HIt!!");
+
+                    Boss boss = hit.collider.gameObject.GetComponent<Boss>();
+                    boss.Damege(Atk + curWeapon.AtkDmg);
                     AttackEnd = true;
                     break;
                 }
