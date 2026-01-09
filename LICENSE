@@ -1,3 +1,13 @@
+## Platform SDK Notice
+
+This public repository **does not contain any Nintendo SDK or proprietary console
+platform code**.  
+All platform-specific implementations that depend on the Nintendo Switch SDK are
+maintained in a **separate private repository** under the applicable NDA.
+
+This repository is licensed under the MIT License (see LICENSE file), and applies
+only to the original code contained here.
+
 MIT License
 
 Copyright (c) 2025 29thnight
