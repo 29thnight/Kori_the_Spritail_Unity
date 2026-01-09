@@ -76,6 +76,6 @@ Joy-Con 분리/결합 상태에 따른 입력 처리 개선 필요
 
 특정 씬에서 로딩 지연 발생 가능
 
-License
-This project is proprietary and confidential.
-Unauthorized distribution or commercial use is not permitted.
+License for NintendoSDK
+NintendoSDK는 독점적이고 기밀에 해당합니다. 무단 배포 및 상업적 사용을 금합니다.
+이에 따라 지금 이 저장소에 관련된 자료는 제외되었음을 알려드립니다.
