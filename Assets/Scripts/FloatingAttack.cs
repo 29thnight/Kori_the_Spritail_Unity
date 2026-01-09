@@ -45,11 +45,15 @@ public class FloatingAttack : MonoBehaviour
     {
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius);
         foreach (var hitCollider in hitColliders) {
-            if (hitCollider.CompareTag("Player")) {
-                /*PlayerHealth playerHealth = hitCollider.GetComponent<PlayerHealth>();
-                if (playerHealth != null) {
-                    playerHealth.TakeDamage(damage);
-                }*/
+            if (hitCollider.CompareTag("Player"))
+            {
+                var _player = hitCollider.gameObject.GetComponent<player>();
+
+                if (_player)
+                {
+                    _player.sendDamage(damage);
+                }
+
             }
         }
     }

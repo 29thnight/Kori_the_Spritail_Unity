@@ -5,10 +5,11 @@ using Action = Unity.Behavior.Action;
 using Unity.Properties;
 
 [Serializable, GeneratePropertyBag]
-[NodeDescription(name: "self patten check", story: "[self] check patten enable", category: "Action", id: "3a0704398e5d300d5d06d237e461f014")]
+[NodeDescription(name: "self patten check", story: "[self] check patten enable [curHP]", category: "Action", id: "3a0704398e5d300d5d06d237e461f014")]
 public partial class SelfPattenCheckAction : Action
 {
     [SerializeReference] public BlackboardVariable<GameObject> Self;
+    [SerializeReference] public BlackboardVariable<int> CurHP;
     Animator animator;
 
     protected override Status OnStart()
@@ -17,6 +18,10 @@ public partial class SelfPattenCheckAction : Action
             animator = Self.Value.GetComponentInChildren<Animator>();
         }
 
+        //if (CurHP.Value <= 0)
+        //{
+        //    return Status.Failure;
+        //}
 
         return Status.Running;
     }

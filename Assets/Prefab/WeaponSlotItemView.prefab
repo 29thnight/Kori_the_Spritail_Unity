@@ -141,13 +141,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 628095900, guid: 8880911e9733a4c418c88ea68c1e3338, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 0
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 2
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!1 &2493311057720309482
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 99
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -386,7 +386,6 @@ MonoBehaviour:
   textBg: {fileID: 707544419579044921}
   slotIndexText: {fileID: 6019005963529064724}
   selectedFx: {fileID: 2916950843539341279}
-  selectedOutline: {fileID: 8469965108145131213}
 --- !u!1 &5920752336816978505
 GameObject:
   m_ObjectHideFlags: 0

@@ -141,6 +141,17 @@
                 },
                 {
                     "name": "",
+                    "id": "562e9081-d7e8-4228-9103-bdeb0ffb2af5",
+                    "path": "<NPad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwapweaponLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "0f5192d7-ba11-46e6-b5ab-f59d475b5beb",
                     "path": "<Keyboard>/x",
                     "interactions": "",
@@ -165,6 +176,17 @@
                     "name": "",
                     "id": "8b5b52ec-318f-4685-aa64-66338a849cef",
                     "path": "<NPad>/rightSR",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwapweaponRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "23c44100-cfff-4929-80e3-2ce3332430e9",
+                    "path": "<NPad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

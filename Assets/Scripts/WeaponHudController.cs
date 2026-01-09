@@ -77,16 +77,25 @@ public sealed class WeaponHudController : MonoBehaviour
             bool selected = (slot == selectedIndex);
 
             float durability01 = 0f;
+            int curDur = 0;
             WeaponIconSet set = defaultSet;
 
             if (w != null)
             {
-                durability01 = w.HudDurability01;
+                durability01 = w.HudDurability01; // 게이지용 (0~1)
+                curDur = w.curDur;                // ★ 텍스트용 (원본 내구도)
                 set = GetIconSet(w.HudSlotKind);
             }
 
             view.ApplySnapshot(hasWeapon, selected, durability01, set);
+
+            // ★ 텍스트는 curDur 기준으로
+            if (hasWeapon)
+                view.SetDurabilityNumber(curDur);
+            else
+                view.SetDurabilityNumber(0); // 내부에서 hasWeapon=false면 알아서 빈 문자열 찍음
         }
+
     }
 
     private WeaponIconSet GetIconSet(WeaponSlotKind kind)

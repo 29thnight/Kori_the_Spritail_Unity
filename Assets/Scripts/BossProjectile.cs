@@ -27,7 +27,9 @@ public class BossProjectile : MonoBehaviour
         direction.y = 0; // Keep the projectile level on the y-axis
         direction.Normalize();
         Vector3 vel =  direction * speed;
-        rb.linearVelocity.Set(vel.x, 0, vel.z);
+        //rb.linearVelocity.Set(vel.x, 0, vel.z);
+
+        rb.linearVelocity = new Vector3(vel.x, 0f, vel.z);
 
     }
 
@@ -35,7 +37,7 @@ public class BossProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       Debug.Log(rb.linearVelocity);
+       Debug.Log($"linearVelocity { rb.linearVelocity }");
        Debug.Log("forward: " + transform.forward);
         if (lifetime <= 0) {
             rb.linearVelocity = Vector3.zero;
@@ -51,11 +53,16 @@ public class BossProjectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("fire OnCollisionEnter");
         if (collision.gameObject.CompareTag("Player")) {
-            /*PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-            if (playerHealth != null) {
-                playerHealth.TakeDamage(damage);
-            }*/
+            
+            var _player = collision.gameObject.GetComponent<player>();
+
+            if (_player)
+            {
+                _player.sendDamage(damage);
+            }
+
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
             // Return to pool
@@ -63,4 +70,5 @@ public class BossProjectile : MonoBehaviour
         }
         
     }
+
 }

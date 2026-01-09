@@ -10,6 +10,7 @@ public class RangeAttack1 : StateMachineBehaviour
         player.isAttacking = true;
         player.SetBitAttack();
         animator.ResetTrigger("RangeAttack");
+        player.AutoRangeTarget();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

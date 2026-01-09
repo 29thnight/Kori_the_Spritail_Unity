@@ -186,4 +186,9 @@ public class weapon : MonoBehaviour
 
         NotifyHudChanged();
     }
+
+    private void OnDestroy()
+    {
+        OnHudChanged -= OnHudChanged;
+    }
 }

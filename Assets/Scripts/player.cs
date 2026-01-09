@@ -62,6 +62,11 @@ public class player : MonoBehaviour
     public List<weapon> Weapons => weaponInven;
     public int SelectedWeaponIndex => weaponIndex;
 
+
+    bool isStun = false;
+
+    public float resurrectionTime = 4.0f;
+    float resurrElaspedTime = 0.0f;
     void Start()
     {
         cc = GetComponent<CharacterController>();
@@ -87,7 +92,7 @@ public class player : MonoBehaviour
     {
         CheckComboTime();
 
-        if(!curWeapon  && curWeapon.isBreak ==true && sucessAttack == true)
+        if(curWeapon  && curWeapon.isBreak ==true && sucessAttack == true)
         {
             DeleteCurWeapon();
         }
@@ -107,6 +112,19 @@ public class player : MonoBehaviour
                 OnInvincibility = false;
             }
         }
+        if (isStun)
+        {
+            resurrElaspedTime += Time.deltaTime;
+            if (resurrElaspedTime >= resurrectionTime)
+            {
+                anim.SetTrigger("OnResurr");
+                SetBitIdle();
+                curHP = 60;
+                isStun = false;
+                resurrElaspedTime = 0;
+            }
+        }
+
         if (isDashing)
         {
             DashMove();
@@ -118,6 +136,7 @@ public class player : MonoBehaviour
     public void sendDamage(int _damage)
     {
         if (OnInvincibility) return;
+        if (isStun) return;
         anim.SetTrigger("OnHit");
 
         Damage(_damage);
@@ -129,6 +148,8 @@ public class player : MonoBehaviour
         if (curHP <= 0)
         {
             curHP = 0;
+            anim.SetTrigger("OnStun");
+            isStun = true;
         }
     }
     private void CharMove()
@@ -492,6 +513,17 @@ public class player : MonoBehaviour
     }
 
 
+    [SerializeField] GameObject boss;
+    public void AutoRangeTarget()
+    {
+        var bossPos = boss.transform.position;
+        var myPos = transform.position;
+        Vector3 dir = bossPos - myPos;
+        dir.y = 0f;
+        Quaternion targetRot = Quaternion.LookRotation(dir);
+        transform.rotation = targetRot;
+    }
+
 
     GameObject nearObject;
     private void OnTriggerEnter(Collider other)
@@ -511,4 +543,5 @@ public class player : MonoBehaviour
     {
         
     }
+   
 }

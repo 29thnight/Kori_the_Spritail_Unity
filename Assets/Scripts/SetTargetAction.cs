@@ -29,7 +29,9 @@ public partial class SetTargetAction : Action
 
     protected override Status OnUpdate()
     {
-        Self.Value.GetComponent<Transform>().LookAt(Target.Value.GetComponent<Transform>());
+        Vector3 dir = Target.Value.GetComponent<Transform>().position;
+        dir.y = Self.Value.transform.position.y;
+        Self.Value.GetComponent<Transform>().LookAt(dir);
 
 
         return Status.Success;

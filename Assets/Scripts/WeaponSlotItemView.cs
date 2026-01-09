@@ -18,28 +18,30 @@ public sealed class WeaponSlotItemView : MonoBehaviour
     [SerializeField] private GameObject emptyGroup; // or Image only (use GO for easy toggle)
     [SerializeField] private Image emptyIcon;       // Empty slot icon
 
-    [Header("Text BG + Slot Index")]
+    [Header("Text BG + Durability Text")]
     [SerializeField] private Image textBg;
-    [SerializeField] private TMP_Text slotIndexText; // optional
+    [SerializeField] private TMP_Text slotIndexText; // A선택지: 슬롯번호 대신 내구도 텍스트로 사용
 
     [Header("Optional Visuals")]
     [SerializeField] private GameObject selectedFx; // optional highlight/glow
-    [SerializeField] private Image selectedOutline;
+
     // State
     private WeaponIconSet iconSet;
     private int slotIndex = -1;
     private bool hasWeapon = false;
     private bool isSelected = false;
+    private float durability01 = 0f; // ★ 내구도 비율 저장
+    private int currentDurability = 0; // ★ 추가: curDur 그대로 저장
+
 
     /// <summary>
-    /// 슬롯 인덱스(0~3) 설정. 텍스트가 있으면 표시합니다.
+    /// 슬롯 인덱스(0~3) 설정.
+    /// A 선택지: 텍스트는 내구도 표시용이므로 여기서는 인덱스만 저장.
     /// </summary>
     public void SetSlotIndex(int index)
     {
         slotIndex = index;
-
-        if (slotIndexText != null)
-            slotIndexText.text = index.ToString();
+        // 이제 텍스트는 내구도 표시용이라 여기서 text를 건드리지 않습니다.
     }
 
     /// <summary>
@@ -73,17 +75,21 @@ public sealed class WeaponSlotItemView : MonoBehaviour
 
     /// <summary>
     /// 내구도 비율(0~1). 무기 없는 슬롯이면 자동으로 숨김 처리됩니다.
+    /// A 선택지: 여기서 텍스트도 내구도 퍼센트로 갱신.
     /// </summary>
     public void SetDurability01(float value01)
     {
         if (durability == null) return;
 
         float v = Mathf.Clamp01(value01);
+        durability01 = v;              // ★ 상태 저장
         durability.fillAmount = v;
 
         // 무기 있을 때만 보이게(원하면 always on으로 바꿔도 됨)
         if (hasWeapon)
             durability.gameObject.SetActive(true);
+
+        UpdateDurabilityText();
     }
 
     /// <summary>
@@ -93,6 +99,10 @@ public sealed class WeaponSlotItemView : MonoBehaviour
     {
         if (durability != null)
             durability.gameObject.SetActive(visible);
+
+        // 게이지 비활성화 시 텍스트도 같이 정리하고 싶으면 필요에 따라 처리
+        if (!visible)
+            ClearDurabilityText();
     }
 
     /// <summary>
@@ -111,7 +121,10 @@ public sealed class WeaponSlotItemView : MonoBehaviour
         if (this.hasWeapon)
             SetDurability01(durability01);
         else
+        {
             SetDurabilityVisible(false);
+            ClearDurabilityText();
+        }
     }
 
     private void Awake()
@@ -119,7 +132,6 @@ public sealed class WeaponSlotItemView : MonoBehaviour
         if (root == null) root = transform as RectTransform;
 
         // 안전: 게이지 Image 타입이 Filled가 아니라면 최소한 경고(런타임 망가짐 방지)
-        // (원하면 로그 제거 가능)
         if (durability != null && durability.type != Image.Type.Filled)
         {
             Debug.LogWarning($"[{name}] Durability Image 타입이 Filled가 아닙니다. (현재: {durability.type})");
@@ -134,9 +146,6 @@ public sealed class WeaponSlotItemView : MonoBehaviour
     private void ApplyStaticSprites()
     {
         if (iconSet == null) return;
-
-        if (selectedOutline != null && iconSet.SelectedOutlineSprite != null)
-            selectedOutline.sprite = iconSet.SelectedOutlineSprite;
 
         if (durability != null && iconSet.GaugeSprite != null)
             durability.sprite = iconSet.GaugeSprite;
@@ -166,11 +175,10 @@ public sealed class WeaponSlotItemView : MonoBehaviour
         if (iconActive != null)
             iconActive.gameObject.SetActive(!isEmpty && isSelected);
 
-
-
         if (selectedFx != null)
             selectedFx.SetActive(!isEmpty && isSelected);
 
+        // 텍스트/텍스트 BG는 무기 있을 때만 노출
         if (textBg != null)
             textBg.gameObject.SetActive(!isEmpty);
 
@@ -201,6 +209,44 @@ public sealed class WeaponSlotItemView : MonoBehaviour
                 durability.gameObject.SetActive(true);
             }
         }
+
+        // 상태가 바뀌었을 때 텍스트도 다시 맞춰준다.
+        if (isEmpty)
+            ClearDurabilityText();
+        else
+            UpdateDurabilityText();
+    }
+
+    /// <summary>
+    /// durability01을 기반으로 텍스트를 갱신(A 선택지: 퍼센트 표시).
+    /// </summary>
+    private void UpdateDurabilityText()
+    {
+        if (slotIndexText == null)
+            return;
+
+        if (!hasWeapon)
+        {
+            slotIndexText.text = string.Empty;
+            return;
+        }
+
+        // ★ 퍼센트 대신 curDur 숫자 그대로
+        slotIndexText.text = currentDurability.ToString();
+    }
+
+    public void SetDurabilityNumber(int curDur)
+    {
+        currentDurability = Mathf.Max(0, curDur);
+        UpdateDurabilityText();
+    }
+
+
+
+    private void ClearDurabilityText()
+    {
+        if (slotIndexText != null)
+            slotIndexText.text = string.Empty;
     }
 
 #if UNITY_EDITOR

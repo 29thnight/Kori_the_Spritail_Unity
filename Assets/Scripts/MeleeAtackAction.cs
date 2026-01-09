@@ -4,6 +4,7 @@ using UnityEngine;
 using Action = Unity.Behavior.Action;
 using Unity.Properties;
 using Unity.AppUI.Core;
+using UnityEngine.EventSystems;
 
 [Serializable, GeneratePropertyBag]
 [NodeDescription(name: "MeleeAtack",description: "MeleeAtack", story: "[self] at forword MeleeAtack to [Range] is [damage] Atack and [Animation]", category: "Action", id: "20ba3a6db2b808a3a2b2796634fd3c49")]
@@ -78,10 +79,24 @@ public partial class MeleeAtackAction : Action
         if (stateInfo.IsName("melee_attack")) {
             if (stateInfo.normalizedTime >= 0.5f) {
                 if (!attacked) {
-                    RaycastHit hit;
-                    if (Physics.Raycast(Self.Value.transform.position, dir, out hit, Range.Value)) {
-                        Debug.Log("Melee Atack Hit: " + hit.collider.name);
+
+                    RaycastHit[] hits;
+                    hits = Physics.RaycastAll(Self.Value.transform.position, dir);
+
+                    if (hits.Length > 0) {
+                        foreach (var hit in hits)
+                        {
+                            if (hit.collider.CompareTag("Player"))
+                            {
+                                var _player = hit.collider.gameObject.GetComponent<player>();
+                                if (_player != null)
+                                {
+                                    _player.sendDamage(Damage);
+                                }
+                            }
+                        }
                     }
+
                     attacked = true;
                 }
                 
